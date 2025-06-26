@@ -11,7 +11,6 @@
 
         <Panel id="_IDGenPanel" headerText="EAN Barcode" class="sapUiResponsiveMargin" width="auto">
             <form:SimpleForm id="_IDGenSimpleForm1" editable="true" layout="ColumnLayout">
-                <Label id="_IDGenLabel0" text="EAN Barcode"/>
                 <Input id="sampleBarcodeScannerResultTwo" type="Text" placeholder="Scan or type barcode" submit="onPress"/>
             </form:SimpleForm>
 
