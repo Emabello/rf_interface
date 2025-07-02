@@ -15,6 +15,19 @@
       "version": "1.18.0",
       "toolsId": "88b330f3-5b1a-4a8c-b99b-15561a066d9c"
     },
+    "crossNavigation": {
+      "inbounds": {
+        "main": {
+          "semanticObject": "RFInterface",
+          "action": "display",
+          "title": "{{appTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    },
     "dataSources": {
       "ZSB_PROD_RF_V2_VAN": {
         "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZSB_PROD_RF_V2_VAN',Version='0001')/$value/",

@@ -1,35 +1,33 @@
 <mvc:View controllerName="rfinterface.controller.firstView"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    xmlns:smartForm="sap.ui.comp.smartform"
-    xmlns:smartField="sap.ui.comp.smartfield"
     xmlns:form="sap.ui.layout.form"
     xmlns:ndc="sap.ndc">
 
 
     <Page id="_IDGenPage" showHeader="false" enableScrolling="true" class="sapUiContentPadding" showNavButton="false">
 
-        <Panel id="_IDGenPanel" headerText="EAN Barcode" class="sapUiResponsiveMargin" width="auto">
-            <form:SimpleForm id="_IDGenSimpleForm1" editable="true" layout="ColumnLayout">
-                <Input id="sampleBarcodeScannerResultTwo" type="Text" placeholder="Scan or type barcode" submit="onPress"/>
-            </form:SimpleForm>
-
+        <Panel id="_IDGenPanel" headerText="{i18n>Barcode}" class="sapUiResponsiveMargin" width="auto">
+            <Input id="sampleBarcodeScannerResultTwo" type="Text" placeholder="{i18n>Scan}" submit="onPress"/>
         </Panel>
-        <Panel id="_IDGenPanel1" headerText="Data" class="sapUiResponsiveMargin" width="auto">
-            <Label id="_IDGenLabel" text="Material :"/>
-            <Input id="_IDGenLabel_t" type="Text" value="{model>/Product}" editable="false" valueState="None" class="whiteInput"/>
-            <Label id="_IDGenLabel1" text="Material Description :"/>
-            <Input id="_IDGenLabel1_t" type="Text" value="{model>/Productdescription}" editable="false"/>
-            <Label id="_IDGenLabel2" text="Batch :"/>
-            <Input id="_IDGenLabel2_t" type="Text" value="{model>/Batch}" editable="false"/>
-            <Label id="_IDGenLabel3" text="Plant :"/>
-            <Input id="_IDGenLabel3_t" type="Text" value="{model>/Plant}" editable="false"/>
+
+        <Panel id="_IDGenPanel1" headerText="{i18n>Previus}" class="sapUiResponsiveMargin" width="auto">
+            <Label id="_IDGenLabel1" text="{i18n>Barcode} :"/>
+            <Input id="_IDGenLabel1_t" type="Text" value="{model>/Barcode}" editable="false" valueState="None" class="whiteInput"/>
+            <Label id="_IDGenLabel2" text="{i18n>EAN} :"/>
+            <Input id="_IDGenLabel2_t" type="Text" value="{model>/EAN}" editable="false" valueState="None" class="whiteInput"/>
+            <Label id="_IDGenLabel3" text="{i18n>Batch} :"/>
+            <Input id="_IDGenLabel3_t" type="Text" value="{model>/Batch}" editable="false"/>
+            <Label id="_IDGenLabel4" text="{i18n>Product} :"/>
+            <Input id="_IDGenLabel4_t" type="Text" value="{model>/Product}" editable="false" valueState="None" class="whiteInput"/>
+            <Label id="_IDGenLabel5" text="{i18n>Productdescription} :"/>
+            <Input id="_IDGenLabel5_t" type="Text" value="{model>/Productdescription}" editable="false"/>
         </Panel>
 
         <footer>
             <OverflowToolbar id="_IDGenOverflowToolbar">
-                <ndc:BarcodeScannerButton id="sampleBarcodeScannerButtonZebraOne" scanSuccess="onScanSuccessOne" scanFail="onScanErrorOne" dialogTitle="Barcode Scanner" class="sampleBarcodeScannerButtonWithZebraEB" />
-                <Button id="_IDGenButton1" type="Accept" text="Accept" press="onPress" ariaDescribedBy="acceptButtonDescription genericButtonDescription"/>
+                <ndc:BarcodeScannerButton id="sampleBarcodeScannerButtonZebraOne" scanSuccess="onScanSuccessOne" scanFail="onScanErrorOne" dialogTitle="{model>/BarcodeScanner}" class="sampleBarcodeScannerButtonWithZebraEB" />
+                <Button id="_IDGenButton1" type="Accept" text="" press="onPress" ariaDescribedBy="acceptButtonDescription genericButtonDescription"/>
             </OverflowToolbar>
         </footer>
     </Page>
