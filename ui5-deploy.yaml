@@ -20,6 +20,6 @@ builder:
           name: ZRF_INTERFAC
           description: Deployed with SAP Fiori tools
           package: ZFIORI_APPS
-          transport: PBGK900215
+          transport: PBGK900465
         exclude:
           - /test/

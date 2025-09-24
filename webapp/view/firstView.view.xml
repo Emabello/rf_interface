@@ -5,7 +5,7 @@
     xmlns:ndc="sap.ndc">
 
 
-    <Page id="_IDGenPage" showHeader="false" enableScrolling="true" class="sapUiContentPadding" showNavButton="false">
+    <Page id="_IDGenPage" showHeader="true" enableScrolling="true" class="sapUiContentPadding" showNavButton="true" navButtonPress=".onNavBack">
 
         <Panel id="_IDGenPanel" headerText="{i18n>Barcode}" class="sapUiResponsiveMargin" width="auto">
             <Input id="sampleBarcodeScannerResultTwo" type="Text" placeholder="{i18n>Scan}" submit="onPress"/>

@@ -135,6 +135,12 @@ sap.ui.define(
           MessageBox.error(sText);
         }
       },
+
+      onNavBack: function () {
+        var sOrigin = window.location.origin;
+        var sUrl = sOrigin + "/ui?sap-ushell-config=headerless#RFMenu-display";
+        window.location.href = sUrl;
+      },
     });
   }
 );
